@@ -8,10 +8,22 @@ public class Task4 {
     //Пример 2: а = 2, b = -2, ответ: 0.25
     //Пример 3: а = 3, b = 0, ответ: 1
     public static void main(String[] args) {
+        System.out.print("\033[H\033[2J");  
+		System.out.flush();
 
+		int numA = 3;
+        int numB = 2;
+		
+		Task4 task4 = new Task4();
+
+		double number = task4.exponentiation(numA, numB);
+		System.out.println(number);
     }
 
     public double exponentiation(int a, int b){
-        return 0;
+
+        double result = Math.pow(a, b);
+        
+        return result;
     }
 }
