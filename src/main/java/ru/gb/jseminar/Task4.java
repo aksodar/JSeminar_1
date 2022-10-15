@@ -9,7 +9,7 @@ public class Task4 {
 	//Пример 2: а = 2, b = -2, ответ: 0.25
 	//Пример 3: а = 3, b = 0, ответ: 1
 	public static void main(String[] args) {
-		System.out.print("\033[H\033[2J");	// Очистка консоли (работает в Windows, на остальных системах может не работать)
+		System.out.print("\033[H\033[2J");	// Очистка консоли (работает в Windows, на остальных системах не проверял)
 		System.out.flush();
 
 		Task4 task4 = new Task4();
