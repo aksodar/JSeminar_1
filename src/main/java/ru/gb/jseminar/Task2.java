@@ -1,9 +1,6 @@
 package ru.gb.jseminar;
 
-import java.sql.Time;
-import java.time.DateTimeException;
 import java.time.LocalTime;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Task2 {
@@ -28,6 +25,7 @@ public class Task2 {
         } else {
             System.out.printf("Доброй ночи, %s", name);
         }
+        iScanner.close();
     }
 
 }
