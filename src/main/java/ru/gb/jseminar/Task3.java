@@ -22,11 +22,6 @@ public class Task3 {
                 }
             }
         }
-        if (count < max){
-            return max;
-        } else {
-            return count;
-        }
-
+        return Math.max (count, max);
     }
 }
