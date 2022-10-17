@@ -1,5 +1,7 @@
 package ru.gb.jseminar;
 
+import java.util.Scanner;
+import java.util.Arrays;;
 public class Homework {
 
     //На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды
@@ -11,12 +13,43 @@ public class Homework {
     //Пример 2: а = 11, b = 7, c = 2, d = 1
     //ответ: [].
     public static void main(String[] args) {
+        Scanner iScanner = new Scanner(System.in);
 
+        System.out.printf("Введите первое число: a = ");
+        int a = Integer.parseInt(iScanner.nextLine());
+
+        System.out.printf("Введите второе число: b = ");
+        int b = Integer.parseInt(iScanner.nextLine());
+
+        System.out.printf("Введите на сколько умножать: c = ");
+        int c = Integer.parseInt(iScanner.nextLine());
+
+        System.out.printf("Введите сколько плюсовать: d = ");
+        int d = Integer.parseInt(iScanner.nextLine());
+
+        String[] combinations = Homework.doIt(a, b, c, d);
+        System.out.printf(Arrays.toString(combinations));
+        iScanner.close();    
     }
 
-    public String[] doIt(int a, int b, int c, int d){
-
-        return new String[]{};
+    public static String[] doIt(int a, int b, int c, int d) {
+        String combination = " ";
+        String result = new String();
+        while (a != b) {
+            int razn = b - a;
+            if (razn % 2 == 0) {
+                a = a * c;
+                razn = razn - a;
+                combination = "k1";
+                System.out.printf(combination);
+            }
+            if (razn % 2 == 1) {
+                a = a + d;
+                razn = razn - a;
+                combination = "k2";
+                System.out.printf(combination);
+            }
+        }
+        return new String[]{String.valueOf(result)};
     }
-
 }
