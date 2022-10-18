@@ -14,7 +14,7 @@ public class Task3 {
         int count = 0;
         int max = count;
         for (int i = 0; i < array.length; i++) {
-            if(max<count){
+            if(max< count){
                 max = count;
             }
             if (array[i] == 1) {
