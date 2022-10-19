@@ -14,9 +14,9 @@ public class Task4 {
 
         Scanner iScanner = new Scanner(System.in);
         System.out.print("a = ");
-        double a = Integer.parseInt(iScanner.nextLine());
+        double a = Double.parseDouble(iScanner.nextLine());
         System.out.print("b = ");
-        double b = Integer.parseInt(iScanner.nextLine());
+        double b = Double.parseDouble(iScanner.nextLine());
         double result = t4.exponentiation(a, b);
         System.out.printf("a^b = %.2f\n", result);
         iScanner.close();

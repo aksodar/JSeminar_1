@@ -1,5 +1,7 @@
 package ru.gb.jseminar;
 
+import java.util.Arrays;
+
 public class Homework {
 
     //На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды
@@ -11,12 +13,25 @@ public class Homework {
     //Пример 2: а = 11, b = 7, c = 2, d = 1
     //ответ: [].
     public static void main(String[] args) {
-
+        Homework homework = new Homework();
+        System.out.println(Arrays.toString(homework.doIt(1, 17, 3, 2)));
     }
 
     public String[] doIt(int a, int b, int c, int d){
-
+        if (b % c == a) {
+            String[] result = new String[b / c];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = "k2";
+            }
+            return result;
+        }
+        if ((b - a) % d == 0) {
+            String[] result = new String[(b - a) / d];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = "k1";
+            }
+            return result;
+        }
         return new String[]{};
     }
-
 }
