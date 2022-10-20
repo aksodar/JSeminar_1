@@ -1,5 +1,8 @@
 package ru.gb.jseminar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Homework {
 
     //На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды
@@ -11,12 +14,42 @@ public class Homework {
     //Пример 2: а = 11, b = 7, c = 2, d = 1
     //ответ: [].
     public static void main(String[] args) {
+        Homework h = new Homework();
+        int a=1;
+        int b=7;
+        int c=2;
+        int d=3;
+        System.out.println(h.doIt(a,b,c,d));
 
     }
 
-    public String[] doIt(int a, int b, int c, int d){
+    public List<String> doIt(int a, int b, int c, int d){
+        List <String> arr= new ArrayList<>();
+        int i=0;
 
-        return new String[]{};
+        if (a>b){
+            System.out.println("Невозможно ");
+        }
+        else {
+            while (b!=a){
+                if (b%c==0){
+                    b=b/c;
+                    arr.add(i, "k1");
+                    i+=1;
+                    System.out.println(b);
+                }
+                else {
+                    if (b-d<a){
+                        System.out.println("Невозможно ");
+                        break;
+                    }
+                    b=b-d;
+                    arr.add(i, "k2");
+                    System.out.println(b);
+                }
+            }
+        }
+        return arr;
     }
 
 }
