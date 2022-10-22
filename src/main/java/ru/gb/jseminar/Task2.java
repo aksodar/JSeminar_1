@@ -1,6 +1,7 @@
 package ru.gb.jseminar;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+
 import java.util.Scanner;
 
 public class Task2 {
@@ -15,8 +16,8 @@ public class Task2 {
         System.out.printf("Введите имя :");
         String name = iScanner.nextLine();
         iScanner.close();
-        Date current = new Date();
-        int time = current.getHours() ;
+        LocalDateTime current = LocalDateTime.now();
+        int time = current.getHour() ;
         if (time >= 5 &&  time < 12 ){
             System.out.printf("Доброе утро, %s!", name);
         } 
