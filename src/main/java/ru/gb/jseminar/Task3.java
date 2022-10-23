@@ -4,15 +4,16 @@ public class Task3 {
 
     //Дан массив двоичных чисел, например [1,1,0,1,1,1,], вывести максимальное количество подряд идущих 1.
     public static void main(String[] args) {
+        Task3 t3 = new Task3();
         double [] ar = new double []{1,1,0,1,1,1,1,0};
-        int kol = count(ar);
+        int kol = t3.count(ar);
         System.out.printf(" максимальное количество подряд идущих 1 = %s", kol);
 
 
     }
 
   
-    public static int count(double[] array){
+    public int count(double[] array){
         int [] temp = new int [array.length - 1];
         int j = 0;
         for (int i = 0; i < array.length; i++) {
