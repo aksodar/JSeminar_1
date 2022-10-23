@@ -1,5 +1,5 @@
 package ru.gb.jseminar;
-
+import java.util.Scanner;
 public class Homework {
 
     //На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды
@@ -11,6 +11,16 @@ public class Homework {
     //Пример 2: а = 11, b = 7, c = 2, d = 1
     //ответ: [].
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите a: ");
+        int a = in.nextInt();
+        System.out.print("Введите b: ");
+        int b = in.nextInt();
+        System.out.print("Введите c: ");
+        int c = in.nextInt();
+        System.out.print("Введите d: ");
+        int d = in.nextInt();
+        in.close();
 
     }
 
