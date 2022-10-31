@@ -39,7 +39,6 @@ public class Homework {
                     }
             }
         }
-        System.out.println(num);
         int k2 = 0;
         if (c<=1){
             k2 = b - a;
@@ -64,7 +63,6 @@ public class Homework {
                 }
             }
         }
-        System.out.print(count_k2);
         int k = count_k1 + count_k2;
         String[] array = new String[k];
         for (int i = 0; i < count_k1; i++){
